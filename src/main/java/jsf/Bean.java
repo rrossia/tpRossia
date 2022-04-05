@@ -37,7 +37,10 @@ public class Bean {
     }
     
     public String afficher() {
-        return "affichage_3?nb=" + nombre + "&amp;faces-redirect=true";
+        return "affichage__3?nb=" + nombre + "&amp;faces-redirect=true";
     }
     
+    public String actionString(String base, String numEx, String query){
+        return base + "__" + numEx + (!"".equals(query) ? "?" + query : "");
+    }
 }
